@@ -7,7 +7,7 @@ Makes a domains blocklist based on many popular filter lists for PortMaster
 1. 1Hosts Pro: https://o0.pages.dev/Pro/domains.txt
 2. AdGuard DNS Filter: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
 3. AdGuard Tracking Protection: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_3_Spyware/filter.txt
-4. ad-wars: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+4. ad-wars: https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts
 5. anti-AD: https://anti-ad.net/domains.txt
 6. BadBlock: https://codeberg.org/Magnesium1062/BadBlock/raw/branch/main/wildcards-no-%2A/badblock.txt
 7. Dan Pollock Hosts: https://someonewhocares.org/hosts/hosts
