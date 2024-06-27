@@ -1,5 +1,11 @@
 {
   "name": "blocklist-manager-portmaster",
+  "author": "Md. Touhidur Rahman",
+  "license": "BSD-3-Clause",
+  "repository": "touhidurrr/blocklists-manager",
+  "bugs": {
+    "url": "https://github.com/touhidurrr/UncivServer.xyz/issues"
+  },
   "module": "src/index.ts",
   "type": "module",
   "scripts": {
