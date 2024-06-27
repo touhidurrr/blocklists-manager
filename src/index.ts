@@ -39,7 +39,7 @@ const promises = fetchers.map(async (fetcher) => {
   fetchedDomains.forEach((domain) => domains.add(domain));
 });
 
-await Promise.allSettled(promises);
+await Promise.all(promises);
 
 const path = "./domains.txt";
 
