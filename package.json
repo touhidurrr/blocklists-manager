@@ -12,11 +12,13 @@
     "start": "bun src/index.ts"
   },
   "dependencies": {
-    "bytes": "^3.1.2"
+    "bytes": "^3.1.2",
+    "validator": "^13.12.0"
   },
   "devDependencies": {
     "@types/bun": "^1.1.5",
-    "@types/bytes": "^3.1.4"
+    "@types/bytes": "^3.1.4",
+    "@types/validator": "^13.12.0"
   },
   "peerDependencies": {
     "typescript": "^5.5.2"

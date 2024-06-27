@@ -4,14 +4,15 @@ const name = "Dan Pollock Hosts";
 const url = "https://someonewhocares.org/hosts/hosts";
 
 const modifier = (fileText: string): string[] => {
-  const lines = fileText.split("\n").map((line) => line.trim());
-
-  const start = lines.indexOf("#</localhost>");
+  const start = fileText.indexOf("#</localhost>");
   if (start < 0) throw new Error(`Failed to parse ${name}`);
 
-  return lines
-    .slice(start + 1)
-    .filter((line) => Boolean(line) && !line.startsWith("#"))
+  return fileText
+    .substring(start)
+    .replace(/#.*$/gm, "")
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => Boolean(line))
     .map((line) => line.split(" ")[1]);
 };
 

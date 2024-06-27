@@ -7,9 +7,10 @@ export class DomainsFetcher {
 
   private modifier = (fileText: string): string[] => {
     return fileText
+      .replace(/#.*$/gm, "")
       .split("\n")
       .map((line) => line.trim())
-      .filter((line) => Boolean(line) && !line.startsWith("#"));
+      .filter((line) => Boolean(line));
   };
 
   constructor(
@@ -20,6 +21,10 @@ export class DomainsFetcher {
     this.url = url;
     this.name = name;
     if (modifier) this.modifier = modifier;
+  }
+
+  getName(): string {
+    return this.name;
   }
 
   async getDomains(): Promise<string[]> {
