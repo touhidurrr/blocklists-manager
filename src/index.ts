@@ -13,7 +13,7 @@ import { DisconnectAdsDomainsFetcher } from "./fetchers/DisconnectAds";
 import { DisconnectTrackingDomainsFetcher } from "./fetchers/DisconnectTracking";
 import { EasyListDomainsFetcher } from "./fetchers/EasyList";
 import { EasyPrivacyDomainsFetcher } from "./fetchers/EasyPrivacy";
-import { OISDBigDomainsFetcher } from "./fetchers/OISDBig";
+import { OisdBigDomainsFetcher } from "./fetchers/OisdBig";
 import { StevenBlackUnifiedHostsDomainsFetcher } from "./fetchers/StevenBlackUnifiedHosts";
 
 const fetchers = [
@@ -28,7 +28,7 @@ const fetchers = [
   DisconnectAdsDomainsFetcher,
   EasyListDomainsFetcher,
   EasyPrivacyDomainsFetcher,
-  OISDBigDomainsFetcher,
+  OisdBigDomainsFetcher,
   StevenBlackUnifiedHostsDomainsFetcher,
 ];
 

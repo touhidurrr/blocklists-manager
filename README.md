@@ -13,7 +13,7 @@ Makes a domains blocklist based on many popular filter lists for PortMaster
 7. Dan Pollock Hosts: https://someonewhocares.org/hosts/hosts
 8. EasyList: https://easylist.to/easylist/easylist.txt
 9. EasyPrivacy: https://easylist.to/easylist/easyprivacy.txt
-10. OISD: https://big.oisd.nl/domainswild2
+10. oisd: https://big.oisd.nl/domainswild2
 11. StevenBlack Unified Hosts: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
 12. Ad filter list by Disconnect: https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt
 13. Basic tracking list by Disconnect: https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt
