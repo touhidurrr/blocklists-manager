@@ -1,10 +1,12 @@
+import chalk from "chalk";
+
 export class Logger {
   private getUptimeString(): string {
-    return `[${process.uptime().toFixed(2)}s]`;
+    return chalk.blue(`[${process.uptime().toFixed(2)}s]`);
   }
 
-  log(message: string) {
-    console.log(this.getUptimeString(), message);
+  log(...messages: unknown[]) {
+    console.log(this.getUptimeString(), ...messages);
   }
 }
 

@@ -1,4 +1,5 @@
 import { format } from "bytes";
+import chalk from "chalk";
 import { join } from "node:path";
 import { logger } from "./models/Logger";
 
@@ -13,6 +14,7 @@ import { DisconnectAdsDomainsFetcher } from "./fetchers/DisconnectAds";
 import { DisconnectTrackingDomainsFetcher } from "./fetchers/DisconnectTracking";
 import { EasyListDomainsFetcher } from "./fetchers/EasyList";
 import { EasyPrivacyDomainsFetcher } from "./fetchers/EasyPrivacy";
+import { NextDNSCNAMECloakingBlocklistDomainsFetcher } from "./fetchers/NextDNSCNAMECloakingBlocklist";
 import { OisdBigDomainsFetcher } from "./fetchers/OisdBig";
 import { StevenBlackUnifiedHostsDomainsFetcher } from "./fetchers/StevenBlackUnifiedHosts";
 
@@ -28,6 +30,7 @@ const fetchers = [
   DisconnectAdsDomainsFetcher,
   EasyListDomainsFetcher,
   EasyPrivacyDomainsFetcher,
+  NextDNSCNAMECloakingBlocklistDomainsFetcher,
   OisdBigDomainsFetcher,
   StevenBlackUnifiedHostsDomainsFetcher,
 ];
@@ -46,9 +49,10 @@ const path = "./domains.txt";
 const fileText = [...domains].join("\n") + "\n";
 await Bun.write(path, fileText);
 
+const fileSize = Buffer.byteLength(fileText);
+const formattedFileSize = format(fileSize, { unitSeparator: " " });
+logger.log("Exported", domains.size, "domains to:");
 logger.log(
-  `Exported ${domains.size} domains to ${join(process.cwd(), path)}. (${format(
-    Buffer.byteLength(fileText),
-    { unitSeparator: " " },
-  )})`,
+  `\t${chalk.green(join(process.cwd(), path))}`,
+  chalk.yellow(`(${formattedFileSize})`),
 );

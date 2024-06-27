@@ -1,5 +1,6 @@
 import { format } from "bytes";
 import { logger } from "./Logger";
+import chalk from "chalk";
 
 export class DomainsFetcher {
   private url: string;
@@ -38,11 +39,9 @@ export class DomainsFetcher {
       );
 
     const fileText = await response.text();
-    logger.log(
-      `Fetched ${this.name}. (${format(Buffer.byteLength(fileText), {
-        unitSeparator: " ",
-      })})`,
-    );
+    const fileSize = Buffer.byteLength(fileText);
+    const formattedFileSize = format(fileSize, { unitSeparator: " " });
+    logger.log(`Fetched ${this.name}.`, chalk.yellow(`(${formattedFileSize})`));
 
     return this.modifier(fileText);
   }

@@ -17,6 +17,7 @@ Makes a domains blocklist based on many popular filter lists for PortMaster
 11. StevenBlack Unified Hosts: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
 12. Ad filter list by Disconnect: https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt
 13. Basic tracking list by Disconnect: https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt
+14. NextDNS CNAME Cloaking Blocklist: https://raw.githubusercontent.com/nextdns/cname-cloaking-blocklist/master/domains
 
 ### Install
 
