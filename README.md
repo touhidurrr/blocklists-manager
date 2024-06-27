@@ -3,6 +3,7 @@
 Makes a domains blocklist based on many popular filter lists for PortMaster
 
 ### Blocklist in use
+
 1. 1Hosts Pro: https://o0.pages.dev/Pro/domains.txt
 2. AdGuard DNS Filter: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
 3. AdGuard Tracking Protection: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_3_Spyware/filter.txt
@@ -18,7 +19,9 @@ Makes a domains blocklist based on many popular filter lists for PortMaster
 13. Basic tracking list by Disconnect: https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt
 
 ### Install
+
 First install [Bun](https://bun.sh/) and [Git](https://git-scm.com/downloads) in your system.
+
 ```bash
 git clone https://github.com/touhidurrr/blocklists-manager.git
 cd blocklists-manager
@@ -26,6 +29,7 @@ bun install -f
 ```
 
 ### Run
+
 ```bash
 bun start
 ```
