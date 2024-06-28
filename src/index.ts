@@ -46,7 +46,7 @@ await Promise.all(promises);
 
 const path = "./domains.txt";
 
-const fileText = [...domains].join("\n") + "\n";
+const fileText = [...domains].sort().join("\n") + "\n";
 await Bun.write(path, fileText);
 
 const fileSize = Buffer.byteLength(fileText);
