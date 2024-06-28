@@ -3,7 +3,7 @@ import { DomainsFetcher } from "../models/DomainsFetcher";
 const name = "StevenBlack Unified Hosts";
 const url = "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts";
 
-const modifier = (fileText: string): string[] => {
+const parser = (fileText: string): string[] => {
   const start = fileText.indexOf("# Start StevenBlack");
   if (start < 0) throw new Error(`Failed to parse ${name}`);
 
@@ -19,5 +19,5 @@ const modifier = (fileText: string): string[] => {
 export const StevenBlackUnifiedHostsDomainsFetcher = new DomainsFetcher(
   name,
   url,
-  modifier,
+  parser,
 );

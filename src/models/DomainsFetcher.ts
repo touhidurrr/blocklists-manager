@@ -6,22 +6,21 @@ export class DomainsFetcher {
   private url: string;
   private name: string;
 
-  private modifier = (fileText: string): string[] => {
-    return fileText
+  private parser = (fileText: string): string[] =>
+    fileText
       .replace(/#.*$/gm, "")
       .split("\n")
       .map((line) => line.trim())
       .filter((line) => Boolean(line));
-  };
 
   constructor(
     name: string,
     url: string,
-    modifier?: (fileText: string) => string[],
+    parser?: (fileText: string) => string[],
   ) {
     this.url = url;
     this.name = name;
-    if (modifier) this.modifier = modifier;
+    if (parser) this.parser = parser;
   }
 
   getName(): string {
@@ -43,6 +42,6 @@ export class DomainsFetcher {
     const formattedFileSize = format(fileSize, { unitSeparator: " " });
     logger.log(`Fetched ${this.name}.`, chalk.yellow(`(${formattedFileSize})`));
 
-    return this.modifier(fileText);
+    return this.parser(fileText);
   }
 }

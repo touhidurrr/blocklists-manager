@@ -3,7 +3,7 @@ import { DomainsFetcher } from "../models/DomainsFetcher";
 const name = "Dan Pollock Hosts";
 const url = "https://someonewhocares.org/hosts/hosts";
 
-const modifier = (fileText: string): string[] => {
+const parser = (fileText: string): string[] => {
   const start = fileText.indexOf("#</localhost>");
   if (start < 0) throw new Error(`Failed to parse ${name}`);
 
@@ -19,5 +19,5 @@ const modifier = (fileText: string): string[] => {
 export const DanPollockHostsDomainsFetcher = new DomainsFetcher(
   name,
   url,
-  modifier,
+  parser,
 );

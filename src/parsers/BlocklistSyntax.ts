@@ -1,6 +1,6 @@
 import isFQDN from "validator/lib/isFQDN";
 
-export const BlocklistSyntaxModfier = (fileText: string): string[] =>
+export const BlocklistSyntaxParser = (fileText: string): string[] =>
   fileText
     .split("\n")
     .map((line) => line.trim())
